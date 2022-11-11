@@ -4,12 +4,48 @@
   <meta charset="UTF-8">
   <title>tornado</title>
   <link rel="stylesheet" href="./style.css">
-
+  <script type="module" src="https://unpkg.com/@fluentui/web-components"></script>
 </head>
 <body>
 <!-- partial:index.partial.html -->
 <div class="container"></div>
 <div class="text">Made For My Dad</div>
+  <fluent-button class="text" onclick="star();">Made For My Dad</fluent-button>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+<script>
+function star() {
+	var defaults = {
+	  spread: 360,
+	  ticks: 50,
+	  gravity: 0,
+	  decay: 0.94,
+	  startVelocity: 30,
+	  shapes: ['star'],
+	  colors: ['FFE400', 'FFBD00', 'E89400', 'FFCA6C', 'FDFFB8']
+	};
+
+	function shoot() {
+	  confetti({
+		 ...defaults,
+		 particleCount: 40,
+		 scalar: 1.2,
+		 shapes: ['star']
+	  });
+
+	  confetti({
+		 ...defaults,
+		 particleCount: 10,
+		 scalar: 0.75,
+		 shapes: ['circle']
+	  });
+	}
+
+	setTimeout(shoot, 0);
+	setTimeout(shoot, 100);
+	setTimeout(shoot, 200);
+}
+</script>
+
 <script type="x-shader/x-fragment" id="fragmentShader">
 
   varying float vStripes;
