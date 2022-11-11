@@ -6,3 +6,10 @@ body {
 canvas {
     display: block;
 }
+.text {
+	position: fixed;
+	z-index: 1000;
+	font-family: sans-serif;
+	right: 80%;
+	bottom: 80%;
+}
