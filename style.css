@@ -6,10 +6,17 @@ body {
 canvas {
     display: block;
 }
-.text {
+.btn {
 	position: fixed;
 	z-index: 1000;
 	font-family: sans-serif;
 	right: 85%;
 	bottom: 90%;
+}
+.text {
+	position: fixed;
+	z-index: 1000;
+	font-family: sans-serif;
+	left: 45%;
+	top: 90%;
 }
